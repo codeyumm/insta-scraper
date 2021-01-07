@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>InstaScrape</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>INSTAGRAM SCRAPER</h1>
+        </div>
+
+        <div class="main-box-dash">
+            <div class="profilePic">
+                <img src="{{ instagram_pic_url }}" alt="" id="dp">  <a href="{{ instagram_pic_url }}" download = "{{ instagram_pic_url }}"><span><i class="fa fa-download" id="fahide"></i></span></a>
+            </div>
+            
+            <div class="allinfo">
+                <h4>{{ instagram_fullname }}  {% if is_verified_account %}
+                                                <span><i class="fa fa-check"></i></span> 
+                                                {% endif %}</h4>
+                <h4>Username - {{ instagram_username }} </h4>
+                <h4>Followers - {{ instagram_followers }}</h4>
+                <h4>Following - {{ instagram_following }}</h4>
+                <h4>Total Post - {{ instagram_total_post }}</h4>
+                <h4>Bio - {{ instagram_bio }}</h4>
+                
+            </div>
+        </div>
+
+        <div class="footer">
+
+        </div>
+    </div>
+
+</body>
+</html>

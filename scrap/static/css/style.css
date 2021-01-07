@@ -1,0 +1,165 @@
+body{
+    background: linear-gradient(90deg, #2994B2 0%, #9FCEDB 98.54%);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+  
+}
+
+
+.wrapper{
+    display: grid;
+    grid-template-rows: 80px auto 80px;
+    justify-content: center;
+    align-content: center;
+
+}
+
+h1{
+    color: #444F5A;
+    
+}
+
+.main-box{
+    background: #FFFBE0;
+    width: 400px;
+    height: 80vh;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
+.main-box-dash{
+    background: #FFFBE0;
+    width: 600px;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.header{
+    justify-self: center;
+}
+
+.main-box{
+    justify-self: center;
+    display: grid;
+    justify-content: center;
+}
+.illu{
+    height: 250px;
+    width: 200px;
+    justify-self: center;
+    padding-top: 60px;
+}
+
+#textInputBox{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444F5A;
+    color: #444F5A;
+    width: 100%;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+form{
+    justify-self: center;
+}
+
+.submitBtn {
+    border: none;
+    text-decoration: none;
+    background-color: #444F5A;
+    color: #FFFBE0;
+    padding: 12px 80px;
+    margin-top: 20px;
+}
+
+    .profilePic{
+        padding-top: 12px;
+        justify-self: center;
+        border-radius: 100px;
+    }
+
+.allinfo{
+    display: grid;
+    padding: 10px;
+}
+
+.allinfo > h4 {
+    justify-self: center;
+    color: #444F5A;
+}
+
+
+@media only screen and (max-width: 40em) { 
+    h1{
+        font-size: 18px;
+    }
+
+    .illu{
+        height: 150px;
+        width: 100px;
+        padding-top: 40px;
+    }
+
+    .main-box{
+        width: 250px;
+        margin-bottom: 50px;
+    }
+
+    .main-box-dash{
+        width: 250px;
+        margin-bottom: 50px;
+    }
+
+    
+    #textInputBox{
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    .submitBtn {
+
+        padding: 12px 80px;
+        margin-top: 20px;
+    }
+
+    .profilePic{
+        height: 40px;
+        width: 20px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .allinfo{
+
+        padding-top: 80px;
+    }
+    
+    .allinfo > h4 {
+        font-size: 12px;
+    }
+
+    #dp{
+        height: 120px;
+        width: 120px;
+        
+        
+    }
+
+    #fahide{
+        display: none;
+    }
+    
+
+}

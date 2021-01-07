@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>InstaScrape</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>INSTAGRAM SCRAPER</h1>
+
+        </div>
+
+        <div class="main-box">
+            <img src="{% static 'images/il1.png'%}" alt="Image" class="illu">
+            
+            <form action="{% url 'index' %}" method="POST" onsubmit="return validateForm()" name="myForm">
+             {% csrf_token %}
+             <input type="text" name="instagramUsername" id="textInputBox" placeholder="Instagram Username"><br>
+             <input type="submit" value="Scrape" class="submitBtn" name="">
+          
+            </form>
+        </div>
+
+        <div class="footer">
+            {% for message in messages %}
+
+            {{ message }}
+        
+        {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["instagramUsername"].value;
+            if (x == "") {
+            alert("Username is required");
+            return false;
+         }
+}
+    </script>
+
+</body>
+</html>
